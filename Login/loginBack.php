@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db_conn.php";
+include "./../DatabaseConnection/db_conn.php";
 
 if (isset($_POST['password']) && isset($_POST['email'])) {
 
@@ -30,7 +30,7 @@ if (isset($_POST['password']) && isset($_POST['email'])) {
                 $_SESSION['name'] = $row['userName'];
                 $_SESSION['fullName'] = $row['fullName'];
                 $_SESSION['id'] = $row['id'];
-                header("Location: home.php");
+                header("Location: /bus_ticket_system/home.php");
                 exit();
             } else {
                 header("Location: login.php?error=Incorect Email or password");

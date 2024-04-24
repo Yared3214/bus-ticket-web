@@ -4,24 +4,24 @@ session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['name'])) {
 
     ?>
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-        <title>HOME</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-    <body>
-        <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
-        <a href="logout.php">Logout</a>
-    </body>
+<body>
+    <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
+    <a href="logout.php">Logout</a>
+</body>
 
-    </html>
+</html>
 
-    <?php
+<?php
 } else {
-    header("Location: login.php");
+    header("Location: Login/login.php");
     exit();
 }
 ?>
