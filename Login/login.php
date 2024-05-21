@@ -20,7 +20,7 @@
             </div>
             <div style="padding-left: 200px; margin-top: 70px;">
                 <?php if (isset($_GET['error'])) { ?>
-                    <p style="background: #F2DEDE; color: #A94442; padding: 10px; width: 500px; 
+                <p style="background: #F2DEDE; color: #A94442; padding: 10px; width: 500px; 
             border-radius: 5px; margin: 20px auto;"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
                 <form method="post" action="loginBack.php" style="display: flex; flex-direction: column; gap: 15px;">
@@ -35,8 +35,12 @@
                     <input
                         style="margin-top: 60px; background-color: black; color: white; width: 500px; height: 35px; border: none; font-size: 17px;"
                         type="submit" value="Log in" placeholder="Enter email" />
-
                 </form>
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <h3>didn't have an account yet?</h3>
+                    <a href="../Register/register.php">Register</a>
+                </div>
+
             </div>
         </div>
 
